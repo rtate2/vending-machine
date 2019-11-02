@@ -1,6 +1,7 @@
 import machineData from './machineData';
 import positionData from './positionData';
 import snackPositionData from './snackPositionData';
+import snackData from './snackData';
 
 const getCompleteMachine = () => new Promise((resolve, reject) => {
   // 1. getMachines - returns first machine (hard coding) - DONE
@@ -10,13 +11,16 @@ const getCompleteMachine = () => new Promise((resolve, reject) => {
   // 5. SMASH EM' - return an array of postiions (in order A1, A2, A3, B1 ...) so positions
   // should have position.snack if a snack exists at that posiiton
   machineData.getMachine()
-  // chaining beginning
     .then((singleMachine) => positionData.getAllPositionsByMachineId(singleMachine.id))
     .then((positions) => {
       snackPositionData.getAllSnackPositionsByMachineId(positions[0].machineId)
-        .then((snackPositions) => resolve(snackPositions));
+        .then((snackPositions) => {
+          snackData.getSnacksByUid(positions[0].uId).then((snacks) => {
+            console.log('snackPositions', snackPositions);
+            resolve(snacks);
+          });
+        });
     })
-  // chaining ending
     .catch((error) => reject(error));
 });
 

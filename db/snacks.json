@@ -1,0 +1,46 @@
+{
+  "snack1": {
+    "imageUrl": "https://mobileimages.lowes.com/product/converted/040000/040000001027.jpg?size=xl",
+    "name": "Snickers",
+    "price": 95,
+    "currentStocked": 4,
+    "lifetimeNum": 6,
+    "uId": "96To7nGQM8gdtLqgoGKFKX87dCN2"
+  },
+
+  "snack2": {
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/71ZRjwF%2Br3L._SL1500_.jpg",
+    "name": "Hershey Bar",
+    "price": 75,
+    "currentStocked": 2,
+    "lifetimeNum": 4,
+    "uId": "96To7nGQM8gdtLqgoGKFKX87dCN2"
+  },
+
+  "snack3": {
+    "imageUrl": "https://i5.walmartimages.com/asr/d88e276f-72e6-49a3-b0ed-3504051a7de1_1.8040a12e97e51ef511d0dcd22838db1e.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+    "name": "M&M",
+    "price": 75,
+    "currentStocked": 5,
+    "lifetimeNum": 6,
+    "uId": "96To7nGQM8gdtLqgoGKFKX87dCN2"
+  },
+
+  "snack4": {
+    "imageUrl": "https://target.scene7.com/is/image/Target/GUEST_8530e0ca-f187-45e3-b968-6a5bd1e0d8ce?wid=488&hei=488&fmt=pjpeg",
+    "name": "Doritos",
+    "price": 95,
+    "currentStocked": 2,
+    "lifetimeNum": 6,
+    "uId": "96To7nGQM8gdtLqgoGKFKX87dCN2"
+  },
+
+  "snack5": {
+    "imageUrl": "https://www.dollargeneral.com/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/0/0/00034000004409_cf__gs1_jpeg.jpg",
+    "name": "Reese's Cups",
+    "price": 95,
+    "currentStocked": 1,
+    "lifetimeNum": 5,
+    "uId": "12345"
+  }
+}

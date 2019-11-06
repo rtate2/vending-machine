@@ -33,6 +33,31 @@ const buildTheStocker = (uId) => {
       domString += '</div>';
       utilities.printToDom('stock', domString);
       $('#stock').on('click', '.delete-snack-position', deleteFromMachine);
+      $('#stock').on('click', '.add-snack-position', addToMachine);
+    })
+    .catch((error) => console.error(error));
+};
+
+const addToMachine = (e) => {
+  e.stopImmediatePropagation();
+  const { uid } = firebase.auth().currentUser;
+  const inputText = $(e.target).siblings().val();
+  smash.getAvailablePositions()
+    .then((positions) => {
+      const selectedPosition = positions.find((x) => x.position.toLowerCase() === inputText.toLowerCase());
+      if (selectedPosition) {
+        const newSnackPosition = {
+          positionId: selectedPosition.id,
+          snackId: e.target.id,
+          machineId: 'machine1',
+          uId: uid,
+        };
+        snackPositionData.createSnackPosition(newSnackPosition).then(() => {
+          // esling-disable-next-line no-use-fore-define
+          buildTheStocker(uid);
+          machine.buildTheMachine();
+        });
+      }
     })
     .catch((error) => console.error(error));
 };
